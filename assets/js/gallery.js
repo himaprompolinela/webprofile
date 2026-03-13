@@ -1,46 +1,105 @@
 /* ============================================================
    HIMAPROM - Gallery Script
    ============================================================ */
-
 document.addEventListener('DOMContentLoaded', () => {
-
-  // Load full gallery on galeri.html
   loadFullGallery();
   loadFilms();
-
 });
-
-async function loadFullGallery() {
+ 
+// ============================================================
+// FUNGSI BANTU — resolvePath
+// ============================================================
+// Tulis selalu path dari root, fungsi ini yang sesuaikan otomatis.
+// Berlaku untuk galeri foto maupun galeri film.
+//
+// Contoh penulisan yang benar:
+//   "assets/images/gallery/post-1.jpg"
+//   "assets/images/film-posters/film-1.jpg"
+//
+// URL eksternal (https://...) langsung dipakai apa adanya.
+// ============================================================
+function resolvePath(path) {
+  if (!path) return null;
+  if (path.startsWith('http://') || path.startsWith('https://')) return path;
+ 
+  const loc = window.location;
+ 
+  // GitHub Pages: /repo-name/pages/...
+  if (loc.hostname.includes('github.io')) {
+    const repoSegment = loc.pathname.split('/')[1];
+    return `${loc.origin}/${repoSegment}/${path}`;
+  }
+ 
+  // Live Server / hosting biasa
+  const depth  = (loc.pathname.match(/\//g) || []).length - 1;
+  const prefix = depth > 1 ? '../'.repeat(depth - 1) : './';
+  return prefix + path;
+}
+ 
+// ============================================================
+// GALERI FOTO
+// ============================================================
+// Semua foto dikelola langsung di array gallery di bawah.
+// Tidak ada fetch, tidak ada database eksternal.
+//
+// CARA MENAMBAH FOTO BARU:
+//   Salin satu blok { } dan tempel sebelum tanda ];
+//   Upload file fotonya ke: assets/images/gallery/
+//
+// CARA MENGHAPUS FOTO:
+//   Hapus seluruh blok { ... }, yang tidak diinginkan
+//
+// CARA MENGUBAH FOTO:
+//   Ganti nilai foto: dengan nama file baru
+//   Kosongkan foto: "" jika belum punya gambar → tampil ikon otomatis
+// ============================================================
+ 
+function loadFullGallery() {
   const container = document.getElementById('full-gallery-container');
   if (!container) return;
-
+ 
+  // ============================================================
+  // DAFTAR FOTO GALERI — edit bagian ini
+  // ============================================================
   const gallery = [
-    { id: 1, title: "Festival Film HIMAPROM 2025", date: "10 Maret 2025", desc: "Dokumentasi Festival Film HIMAPROM 2025" },
-    { id: 2, title: "Workshop Fotografi & Sinematografi", date: "20 Februari 2025", desc: "Kegiatan workshop bersama profesional" },
-    { id: 3, title: "Pelantikan Pengurus HIMAPROM 2025", date: "5 Januari 2025", desc: "Momen pelantikan pengurus" },
-    { id: 4, title: "Leadership Camp HDD 2025", date: "15 Februari 2025", desc: "Kegiatan leadership camp divisi HDD" },
-    { id: 5, title: "Talkshow Media Kreatif", date: "1 Maret 2025", desc: "Talkshow dengan narasumber industri media" },
-    { id: 6, title: "Social Campaign SID 2025", date: "28 Februari 2025", desc: "Kampanye sosial divisi SID" }
+    {
+      foto : "../assets/images/gallery/DSC09053.JPG",
+      title: "Proses Pembuatan Film HIMAPROM 2025",
+      date : "10 Maret 2025",
+    },
   ];
-
-  const icons = ['🎬', '📷', '🎤', '🏕️', '🎙️', '📢'];
-
-  container.innerHTML = gallery.map((item, i) => `
-    <div class="gallery-card fade-in" onclick="openGalleryModal(${item.id})">
-      <div class="gallery-image">
-        <div class="gallery-image-placeholder">${icons[i % icons.length]}</div>
-        <div class="gallery-overlay">
-          <span class="gallery-overlay-text">Lihat Detail →</span>
+  // ============================================================
+ 
+  const fallbackIcons = ['🎬', '📷', '🎤', '🏕️', '🎙️', '📢'];
+ 
+  container.innerHTML = gallery.map((item, i) => {
+    const src = resolvePath(item.foto);
+    return `
+      <div class="gallery-card fade-in" onclick="openGalleryModal(${i + 1})">
+        <div class="gallery-image">
+          ${src
+            ? `<img
+                 src="${src}"
+                 alt="${item.title}"
+                 style="width:100%;height:100%;object-fit:cover;"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+               >`
+            : ''}
+          <div class="gallery-image-placeholder" style="${src ? 'display:none' : ''}">
+            ${fallbackIcons[i % fallbackIcons.length]}
+          </div>
+          <div class="gallery-overlay">
+            <span class="gallery-overlay-text">Lihat Detail →</span>
+          </div>
+        </div>
+        <div class="gallery-info">
+          <h3>${item.title}</h3>
+          <time>${item.date}</time>
         </div>
       </div>
-      <div class="gallery-info">
-        <h3>${item.title}</h3>
-        <time>${item.date}</time>
-      </div>
-    </div>
-  `).join('');
-
-  // Trigger animations
+    `;
+  }).join('');
+ 
   setTimeout(() => {
     document.querySelectorAll('.fade-in').forEach((el, i) => {
       setTimeout(() => el.classList.add('visible'), i * 100);
@@ -48,48 +107,77 @@ async function loadFullGallery() {
   }, 100);
 }
 
-async function loadFilms() {
+function loadFilms() {
   const container = document.getElementById('film-container');
   if (!container) return;
-
+ 
+  // ============================================================
+  // DAFTAR FILM — edit bagian ini
+  // ============================================================
   const films = [
-    { id: 1, title: "Bayang Nusantara", year: 2025, genre: "Drama Budaya", youtube: "https://youtube.com" },
-    { id: 2, title: "Jejak Digital", year: 2024, genre: "Thriller", youtube: "https://youtube.com" },
-    { id: 3, title: "Satu Langkah", year: 2024, genre: "Dokumenter", youtube: "https://youtube.com" },
-    { id: 4, title: "Sang Dalang", year: 2024, genre: "Drama", youtube: "https://youtube.com" },
-    { id: 5, title: "Nusantara Rising", year: 2023, genre: "Aksi", youtube: "https://youtube.com" },
-    { id: 6, title: "Suara Tanah", year: 2023, genre: "Dokumenter", youtube: "https://youtube.com" },
-    { id: 7, title: "Lensa Budaya", year: 2023, genre: "Dokumenter", youtube: "https://youtube.com" },
-    { id: 8, title: "Di Balik Layar", year: 2022, genre: "Drama", youtube: "https://youtube.com" }
+    {
+      poster : "../assets/images/film-posters/Pesilat Sejati.jpeg",
+      title  : "Pesilat Sejati",
+      year   : 2025,
+      genre  : "Drama Budaya",
+      youtube: "https://youtube.com",
+    },
+    {
+      poster : "assets/images/film-posters/film-2.jpg",
+      title  : "Coming Soon",
+      year   : 2025,
+      genre  : "Thriller",
+      youtube: "https://youtube.com",
+    },
   ];
-
-  const icons = ['🎬', '🎥', '📽️', '🎞️', '🎭', '🎪', '🎨', '🖥️'];
-
-  container.innerHTML = films.map((film, i) => `
-    <a href="${film.youtube}" target="_blank" rel="noopener noreferrer" class="film-card fade-in">
-      <div class="film-poster">
-        <div class="film-poster-placeholder">
-          <span>${icons[i % icons.length]}</span>
+  // ============================================================
+ 
+  const fallbackIcons = ['🎬', '🎥', '📽️', '🎞️', '🎭', '🎪', '🎨', '🖥️'];
+ 
+  // Sesuaikan path poster relatif terhadap posisi halaman
+  function resolvePath(path) {
+    if (!path) return null;
+    if (path.startsWith('http')) return path;
+    const depth  = (window.location.pathname.match(/\//g) || []).length - 1;
+    const prefix = depth > 1 ? '../'.repeat(depth - 1) : './';
+    return prefix + path;
+  }
+ 
+  container.innerHTML = films.map((film, i) => {
+    const src = resolvePath(film.poster);
+    return `
+      <a href="${film.youtube}" target="_blank" rel="noopener noreferrer" class="film-card fade-in">
+        <div class="film-poster">
+          ${src
+            ? `<img
+                 src="${src}"
+                 alt="Poster ${film.title}"
+                 style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+               >`
+            : ''}
+          <div class="film-poster-placeholder" style="${src ? 'display:none' : ''}">
+            <span>${fallbackIcons[i % fallbackIcons.length]}</span>
+          </div>
+          <div class="film-play-overlay">
+            <div class="film-play-btn">▶</div>
+          </div>
         </div>
-        <div class="film-play-overlay">
-          <div class="film-play-btn">▶</div>
+        <div class="film-info">
+          <h3>${film.title}</h3>
+          <div class="film-meta">${film.year} · ${film.genre}</div>
         </div>
-      </div>
-      <div class="film-info">
-        <h3>${film.title}</h3>
-        <div class="film-meta">${film.year} · ${film.genre}</div>
-      </div>
-    </a>
-  `).join('');
-
+      </a>
+    `;
+  }).join('');
+ 
   setTimeout(() => {
     document.querySelectorAll('.fade-in').forEach((el, i) => {
       setTimeout(() => el.classList.add('visible'), i * 80);
     });
   }, 100);
 }
-
+ 
 function openGalleryModal(id) {
-  // Could open a lightbox - simplified for demo
   console.log('Opening gallery post:', id);
 }
