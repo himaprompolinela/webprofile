@@ -85,20 +85,6 @@ async function loadNews() {
   const news = [
     {
       id: 1,
-      title: "HIMAPROM Raih Juara 1 Festival Film Mahasiswa Nasional 2025",
-      date: "10 Maret 2025",
-      category: "Prestasi",
-      content: "Tim HIMAPROM berhasil meraih juara pertama dalam Festival Film Mahasiswa Nasional 2025 yang diselenggarakan di Jakarta."
-    },
-    {
-      id: 2,
-      title: "Workshop Produksi Film Bersama Sineas Nasional",
-      date: "20 Februari 2025",
-      category: "Event",
-      content: "HIMAPROM mengadakan workshop produksi film eksklusif bersama sineas nasional terkemuka."
-    },
-    {
-      id: 3,
       title: "Kolaborasi HIMAPROM dengan Media Partner Baru",
       date: "15 Januari 2025",
       category: "Kolaborasi",
