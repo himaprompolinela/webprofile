@@ -116,7 +116,7 @@ function loadFilms() {
   // ============================================================
   const films = [
     {
-      poster : "../assets/images/film-posters/Pesilat Sejati.jpeg",
+      poster : "/assets/images/film-posters/Pesilat Sejati.jpeg",
       title  : "Pesilat Sejati",
       year   : 2025,
       genre  : "Drama Budaya",
