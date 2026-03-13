@@ -63,7 +63,7 @@ function loadFullGallery() {
   // ============================================================
   const gallery = [
     {
-      foto : "../assets/images/gallery/DSC09053.JPG",
+      foto : "/assets/images/gallery/DSC09053.JPG",
       title: "Proses Pembuatan Film HIMAPROM 2025",
       date : "10 Maret 2025",
     },
