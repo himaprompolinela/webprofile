@@ -1,28 +1,10 @@
 [
   {
     "id": 1,
-    "title": "HIMAPROM Raih Juara 1 Festival Film Mahasiswa Nasional 2025",
-    "date": "2025-03-10",
-    "category": "Prestasi",
-    "thumbnail": "../assets/images/gallery/post-1.jpg",
-    "content": "Tim HIMAPROM berhasil meraih juara pertama dalam Festival Film Mahasiswa Nasional 2025 yang diselenggarakan di Jakarta. Film pendek berjudul 'Bayang Nusantara' berhasil memukau para juri dengan memadukan elemen budaya tradisional Indonesia dengan sinematografi modern.",
-    "gallery": []
-  },
-  {
-    "id": 2,
-    "title": "Workshop Produksi Film Bersama Sineas Nasional",
-    "date": "2025-02-20",
-    "category": "Event",
-    "thumbnail": "../assets/images/gallery/post-2.jpg",
-    "content": "HIMAPROM mengadakan workshop produksi film eksklusif bersama sineas nasional terkemuka. Workshop ini dihadiri oleh seluruh anggota HIMAPROM dan mahasiswa dari berbagai program studi yang tertarik dalam bidang produksi media.",
-    "gallery": []
-  },
-  {
-    "id": 3,
     "title": "Kolaborasi HIMAPROM dengan Media Partner Baru",
     "date": "2025-01-15",
     "category": "Kolaborasi",
-    "thumbnail": "../assets/images/gallery/post-3.jpg",
+    "thumbnail": "../assets/images/gallery/Square.jpg",
     "content": "HIMAPROM resmi menjalin kerjasama dengan beberapa media partner baru dalam rangka pengembangan konten digital dan peningkatan kualitas produksi media anggota.",
     "gallery": []
   }
