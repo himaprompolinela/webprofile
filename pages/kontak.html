@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak – HIMAPROM</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo/bumper logo-01.png" alt="HIMAPROM" onerror="this.style.display='none'">
+        <span class="nav-logo-text">HIMAPROM</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="divisi.html">Divisi</a></li>
+        <li><a href="program.html">Program Kerja</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="galeri-film.html">Galeri Film</a></li>
+        <li><a href="angkatan.html">Angkatan</a></li>
+        <li><a href="struktur.html">Struktur</a></li>
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+      </ul>
+      <button class="burger" id="burger-btn">
+        <span class="shutter-blade"></span><span class="shutter-blade"></span><span class="shutter-blade"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html">Home <span>→</span></a>
+    <a href="tentang.html">Tentang HIMAPROM <span>→</span></a>
+    <a href="divisi.html">Divisi <span>→</span></a>
+    <a href="program.html">Program Kerja <span>→</span></a>
+    <a href="galeri.html">Galeri <span>→</span></a>
+    <a href="galeri-film.html">Galeri Film <span>→</span></a>
+    <a href="angkatan.html">Angkatan <span>→</span></a>
+    <a href="struktur.html">Struktur Organisasi <span>→</span></a>
+    <a href="kontak.html">Kontak <span>→</span></a>
+  </div>
+
+  <div class="page-header">
+    <div class="container page-header-content">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Kontak</span>
+      </div>
+      <div class="section-label">Hubungi Kami</div>
+      <h1 class="page-title">Kontak <span class="gold-text">HIMAPROM</span></h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="fade-in">
+          <div class="section-label">Info Kontak</div>
+          <h2 class="section-title" style="font-size: 2rem;">Mari <span class="gold-text">Terhubung</span></h2>
+          <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 32px;">
+            Punya pertanyaan, ide kolaborasi, atau ingin bergabung dengan HIMAPROM? Kami selalu terbuka untuk berdiskusi dan berkolaborasi.
+          </p>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-item-icon">✉️</div>
+              <div>
+                <div class="contact-item-label">Email</div>
+                <div class="contact-item-value">himaprom@email.com</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">📷</div>
+              <div>
+                <div class="contact-item-label">Instagram</div>
+                <div class="contact-item-value">@himaprom</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon">▶️</div>
+              <div>
+                <div class="contact-item-label">YouTube</div>
+                <div class="contact-item-value">HIMAPROM Channel</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 40px; padding: 24px; background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: 8px;">
+            <div style="font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-family: var(--font-mono);">Jam Operasional</div>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.8;">
+              Senin – Jumat: 08.00 – 17.00 WIB<br>
+              Sabtu: 09.00 – 14.00 WIB<br>
+              Minggu: Libur
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="fade-in fade-in-delay-2">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 40px;">
+            <h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Kirim Pesan</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 28px;">Isi formulir di bawah dan kami akan segera menghubungi Anda.</p>
+
+            <div class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label class="form-label" for="nama">Nama Lengkap</label>
+                <input class="form-input" type="text" id="nama" placeholder="Masukkan nama Anda" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-input" type="email" id="email" placeholder="email@example.com" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subjek">Subjek</label>
+                <input class="form-input" type="text" id="subjek" placeholder="Apa yang ingin Anda diskusikan?" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pesan">Pesan</label>
+                <textarea class="form-textarea" id="pesan" placeholder="Tuliskan pesan Anda di sini..."></textarea>
+              </div>
+              <button class="btn btn-gold" onclick="submitForm()" style="width: 100%; justify-content: center;">
+                Kirim Pesan →
+              </button>
+            </div>
+
+            <div id="form-success" style="display:none; text-align:center; padding: 32px;">
+              <div style="font-size: 3rem; margin-bottom: 16px;">✅</div>
+              <h4 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--gold); margin-bottom: 8px;">Pesan Terkirim!</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Terima kasih, kami akan menghubungi Anda segera.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/logo/himaprom-logo.png" alt="HIMAPROM" onerror="this.style.display='none'" />
+          <div class="footer-brand-name">HIMAPROM</div>
+          <div class="footer-brand-sub">Menciptakan Media, Menginspirasi Dunia</div>
+          <div class="footer-social"><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶</a><a href="#" class="social-link">✉</a></div>
+        </div>
+        <div class="footer-col"><h4>Navigasi</h4><div class="footer-links"><a href="../index.html">Home</a><a href="tentang.html">Tentang</a><a href="divisi.html">Divisi</a><a href="program.html">Program Kerja</a></div></div>
+        <div class="footer-col"><h4>Konten</h4><div class="footer-links"><a href="galeri.html">Galeri</a><a href="galeri-film.html">Galeri Film</a><a href="angkatan.html">Angkatan</a><a href="struktur.html">Struktur</a></div></div>
+        <div class="footer-col"><h4>Hubungi</h4><div class="footer-links"><a href="kontak.html">Kontak</a></div></div>
+      </div>
+      <div class="footer-bottom"><p class="footer-copy">© 2025 <span>HIMAPROM</span>. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/burger-animation.js"></script>
+  <script>
+    function submitForm() {
+      const nama = document.getElementById('nama').value;
+      const email = document.getElementById('email').value;
+      const pesan = document.getElementById('pesan').value;
+
+      if (!nama || !email || !pesan) {
+        alert('Mohon lengkapi semua field yang diperlukan.');
+        return;
+      }
+
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

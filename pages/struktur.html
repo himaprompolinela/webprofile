@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struktur Organisasi – HIMAPROM</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .org-tree {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .org-level {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      position: relative;
+    }
+
+    .org-connector {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold-dim), transparent);
+      margin: 0 auto;
+    }
+
+    .org-row-connector {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin: 0;
+      padding: 0 120px;
+    }
+
+    .member-card {
+      min-width: 160px;
+      max-width: 180px;
+    }
+
+    .division-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .division-group-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-align: center;
+      padding: 4px 12px;
+      border: 1px solid var(--border-gold);
+      border-radius: 2px;
+    }
+
+    .division-members {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .division-members .member-card {
+      min-width: 180px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/images/logo/bumper logo-01.png" alt="HIMAPROM" onerror="this.style.display='none'">
+        <span class="nav-logo-text">HIMAPROM</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="divisi.html">Divisi</a></li>
+        <li><a href="program.html">Program Kerja</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="galeri-film.html">Galeri Film</a></li>
+        <li><a href="angkatan.html">Angkatan</a></li>
+        <li><a href="struktur.html" class="active">Struktur</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <button class="burger" id="burger-btn">
+        <span class="shutter-blade"></span><span class="shutter-blade"></span><span class="shutter-blade"></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html">Home <span>→</span></a>
+    <a href="tentang.html">Tentang HIMAPROM <span>→</span></a>
+    <a href="divisi.html">Divisi <span>→</span></a>
+    <a href="program.html">Program Kerja <span>→</span></a>
+    <a href="galeri.html">Galeri <span>→</span></a>
+    <a href="galeri-film.html">Galeri Film <span>→</span></a>
+    <a href="angkatan.html">Angkatan <span>→</span></a>
+    <a href="struktur.html">Struktur Organisasi <span>→</span></a>
+    <a href="kontak.html">Kontak <span>→</span></a>
+  </div>
+
+  <div class="page-header">
+    <div class="container page-header-content">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Struktur Organisasi</span>
+      </div>
+      <div class="section-label">Kepengurusan</div>
+      <h1 class="page-title">Struktur <span class="gold-text">Organisasi</span></h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;" class="fade-in">
+        <p class="section-subtitle" style="margin: 0 auto;">Struktur kepengurusan HIMAPROM periode 2025 yang berkomitmen memajukan organisasi dan anggotanya.</p>
+      </div>
+
+      <div class="org-tree fade-in">
+        <!-- Ketua -->
+        <div class="org-level">
+          <div class="member-card featured">
+            <div class="member-photo large">
+              <img src="../assets/images/struktur/ketua-himaprom.jpg" alt="Ketua" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+              <span style="display:none; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.8rem;">👤</span>
+            </div>
+            <div class="member-role">Ketua Himpunan</div>
+            <div class="member-name">Okta Wahyu Dwi Ramdani</div>
+          </div>
+        </div>
+
+        <div class="org-connector"></div>
+
+        <!-- Wakil Ketua, Sekretaris, Bendahara -->
+        <div class="org-level">
+          <div class="member-card">
+            <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+            <div class="member-role">Wakil Ketua</div>
+            <div class="member-name">Zhelsya Rianov</div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+            <div class="member-role">Sekretaris</div>
+            <div class="member-name">Siska Amelia Putri</div>
+          </div>
+          <div class="member-card">
+            <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+            <div class="member-role">Bendahara</div>
+            <div class="member-name">Inas Atiqah Rahmasari</div>
+          </div>
+        </div>
+
+        <div class="org-connector"></div>
+
+        <!-- Division Coordinators -->
+        <div class="org-level" style="align-items: flex-start; gap: 16px;">
+
+          <!-- HDD -->
+          <div class="division-group">
+            <div class="division-group-label">🧠 HDD</div>
+            <div class="division-members">
+              <div class="member-card">
+                <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+                <div class="member-role">Ketua Divisi</div>
+                <div class="member-name">M. Akbar Jaiz</div>
+              </div>
+              <div class="member-card">
+                <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+                <div class="member-role">Wakil Divisi</div>
+                <div class="member-name">Raditya Anugrah</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CMD -->
+          <div class="division-group">
+            <div class="division-group-label">🎨 CMD</div>
+            <div class="division-members">
+              <div class="member-card">
+                <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+                <div class="member-role">Ketua Divisi</div>
+                <div class="member-name">Ikhsan Abdul Fathah</div>
+              </div>
+              <div class="member-card">
+                <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+                <div class="member-role">Wakil Divisi</div>
+                <div class="member-name">Naila Salsabilla</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SID -->
+          <div class="division-group">
+            <div class="division-group-label">🌍 SID</div>
+            <div class="division-members">
+              <div class="member-card">
+                <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+                <div class="member-role">Ketua Divisi</div>
+                <div class="member-name">Nugraha Mahardika K.</div>
+              </div>
+              <div class="member-card">
+                <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+                <div class="member-role">Wakil Divisi</div>
+                <div class="member-name">Queenta Arifin W.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TID -->
+          <div class="division-group">
+            <div class="division-group-label">🌟 TID</div>
+            <div class="division-members">
+              <div class="member-card">
+                <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+                <div class="member-role">Ketua Divisi</div>
+                <div class="member-name">M. Fahrurrohman</div>
+              </div>
+              <div class="member-card">
+                <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+                <div class="member-role">Wakil Divisi</div>
+                <div class="member-name">Juliani Dwi Puspita</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BID -->
+          <div class="division-group">
+            <div class="division-group-label">💼 BID</div>
+            <div class="division-members">
+              <div class="member-card">
+                <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+                <div class="member-role">Ketua Divisi</div>
+                <div class="member-name">Kian Abhinaya P.</div>
+              </div>
+              <div class="member-card">
+                <div class="member-photo"><span style="display:flex; align-items:center; justify-content:center; width:100%; height:100%; font-size:1.5rem;">👤</span></div>
+                <div class="member-role">Wakil Divisi</div>
+                <div class="member-name">Naila Kaswa Azahra</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../assets/images/logo/himaprom-logo.png" alt="HIMAPROM" onerror="this.style.display='none'" />
+          <div class="footer-brand-name">HIMAPROM</div>
+          <div class="footer-brand-sub">Menciptakan Media, Menginspirasi Dunia</div>
+          <div class="footer-social"><a href="#" class="social-link">📷</a><a href="#" class="social-link">▶</a><a href="#" class="social-link">✉</a></div>
+        </div>
+        <div class="footer-col"><h4>Navigasi</h4><div class="footer-links"><a href="../index.html">Home</a><a href="tentang.html">Tentang</a><a href="divisi.html">Divisi</a><a href="program.html">Program Kerja</a></div></div>
+        <div class="footer-col"><h4>Konten</h4><div class="footer-links"><a href="galeri.html">Galeri</a><a href="galeri-film.html">Galeri Film</a><a href="angkatan.html">Angkatan</a><a href="struktur.html">Struktur</a></div></div>
+        <div class="footer-col"><h4>Hubungi</h4><div class="footer-links"><a href="kontak.html">Kontak</a></div></div>
+      </div>
+      <div class="footer-bottom"><p class="footer-copy">© 2025 <span>HIMAPROM</span>. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/burger-animation.js"></script>
+</body>
+</html>

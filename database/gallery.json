@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Festival Film HIMAPROM 2025",
+    "date": "2025-03-10",
+    "thumbnail": "../assets/images/gallery/post-1.jpg",
+    "images": ["../assets/images/gallery/post-1.jpg"],
+    "description": "Dokumentasi Festival Film HIMAPROM 2025 yang berlangsung meriah."
+  },
+  {
+    "id": 2,
+    "title": "Workshop Fotografi & Sinematografi",
+    "date": "2025-02-20",
+    "thumbnail": "../assets/images/gallery/post-2.jpg",
+    "images": ["../assets/images/gallery/post-2.jpg"],
+    "description": "Kegiatan workshop fotografi dan sinematografi bersama para profesional."
+  },
+  {
+    "id": 3,
+    "title": "Pelantikan Pengurus HIMAPROM 2025",
+    "date": "2025-01-05",
+    "thumbnail": "../assets/images/gallery/post-3.jpg",
+    "images": ["../assets/images/gallery/post-3.jpg"],
+    "description": "Momen bersejarah pelantikan pengurus HIMAPROM periode 2025."
+  }
+]

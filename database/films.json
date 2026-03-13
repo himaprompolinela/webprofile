@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Bayang Nusantara",
+    "year": 2025,
+    "poster": "../assets/images/film-posters/film-1.jpg",
+    "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "genre": "Drama Budaya",
+    "duration": "15 menit",
+    "description": "Film pendek yang mengeksplorasi perpaduan budaya wayang dengan kehidupan modern."
+  },
+  {
+    "id": 2,
+    "title": "Jejak Digital",
+    "year": 2024,
+    "poster": "../assets/images/film-posters/film-2.jpg",
+    "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "genre": "Thriller",
+    "duration": "20 menit",
+    "description": "Kisah tentang identitas digital dan realita di era teknologi."
+  },
+  {
+    "id": 3,
+    "title": "Satu Langkah",
+    "year": 2024,
+    "poster": "../assets/images/film-posters/film-3.jpg",
+    "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "genre": "Dokumenter",
+    "duration": "25 menit",
+    "description": "Dokumenter perjalanan mahasiswa media dalam meraih impian."
+  }
+]
